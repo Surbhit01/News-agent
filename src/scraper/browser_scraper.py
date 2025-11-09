@@ -24,7 +24,7 @@ async def get_article_from_headline(page, article_url, cfg):
         content = await page.locator("article, div.articlebodycontent").inner_text()
         return content.strip()
     except Exception as e:
-        print(f"[ERROR] Failed to extract main text for {article_url} - {e}")
+        # print(f"[ERROR] Failed to extract main text for {article_url} - {e}")
         return ""
     
     
